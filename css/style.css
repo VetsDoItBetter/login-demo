@@ -1,0 +1,171 @@
+body  
+{  
+    margin: 0;  
+    padding: 0;  
+	background-color: #f0eaec;
+    font-family: 'Arial';
+	
+
+}  
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  align-content: center;
+  position: fixed;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+/* testing */
+
+.navbar .socials li {
+list-style-type: none;
+display: inline-block;
+line-height: 60px;
+font-size: 18px;
+padding: 0 5px;
+}
+.navbar .socials li a {
+	list-style-type: none;
+color: #555;
+}
+.navbar .socials li a:hover{
+	list-style-type: none;
+color: #fff;
+}
+/* -------- */
+
+.bg {
+  /* The image used */
+  background-image: url("bedroom.jpg");
+
+  /* Full height */
+  height: 50%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Style all font awesome icons */
+.fa {
+  float: left;	
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+  /* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+/* Set a specific color for each brand *//* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+} 
+
+.login{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+		position: fixed;
+		top: 150px;
+		left: 500px;
+		
+		padding: 100px;  
+        background: #23463f;  
+        border-radius: 15px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: #277582;  
+    padding: 20px;  
+}  
+label{  
+    color: #08ffd1;  
+    font-size: 17px;  
+}  
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+  
+  
+}  
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+a{  
+    float: right;  
+    background-color: grey;  
+}  
+.form-2 {
+    /* Size and position */
+    width: 340px;
+    margin: 60px auto 30px;
+    padding: 15px;
+    position: relative;
+
+    /* Styles */
+    background: #fffaf6;
+    border-radius: 4px;
+    color: #7e7975;
+    box-shadow:
+        0 2px 2px rgba(0,0,0,0.2),        
+        0 1px 5px rgba(0,0,0,0.2),        
+        0 0 0 12px rgba(255,255,255,0.4); 
+}
+
+
+
