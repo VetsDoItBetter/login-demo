@@ -1,3 +1,4 @@
+
 <html>    
 <head>    
     <title>K Antoinnette Transitions</title>    
@@ -12,6 +13,7 @@
 
         .bg {
         /* The image used */
+     
         background-image: url("bedroom.jpg");
 
         /* Full height */
