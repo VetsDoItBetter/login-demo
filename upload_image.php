@@ -1,57 +1,36 @@
  <?php  
- $connect = mysqli_connect("localhost", "root", "PASSWORD", "login");  
- if(isset($_POST["insert"]))  
- {  
-      $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));  
-      //$query = "INSERT INTO tbl_images(name) VALUES ('$file')";  
-      $query = "REPLACE INTO tbl_images(id, name) VALUES (1,'$file')";
-      if(mysqli_query($connect, $query))  
-      {  
-           echo '<script>alert("Image Inserted into Database")</script>';  
-      } 
-       
- }  
+    include 'connection.php';
+    include 'upload_to_database.php';
  ?>  
  <!DOCTYPE html>  
  <html>  
       <head>  
            <title>Upload</title>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
-           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> 
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
       </head>  
-      <body>  
-           <br /><br />  
+      <body> 
+    <br/> 
            <div class="container" style="width:500px;">  
-                <h3 align="center">Insert and Display Images From Mysql</h3>  
-                <br />  
+                <h3 align="center">Insert and Display Image</h3>  
+                <br/>
                 <form method="post" enctype="multipart/form-data">  
                      <input type="file" name="image" id="image" />  
-                     <br />  
+                     <br/>  
                      <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-info" />  
                 </form>  
-                <br />  
-                <br />  
-                <table class="table table-bordered">  
-                     <tr>  
-                          <th>Image</th>  
-                     </tr>  
+                <br/>
+                
+                <form action="logout.php" method="post">
+                <input name="return" type="hidden" value="<?php echo urlencode($_SERVER["PHP_SELF"]);?>" />
+                <input class "btn btn-info" type="submit" value="logout" />
+               
+                </form>
+                <br/> 
                 <?php  
-                //$query = "SELECT * FROM tbl_images ORDER BY id DESC";  
-                $query = "Select * FROM tbl_images WHERE id='1'";
-                $result = mysqli_query($connect, $query);  
-                while($row = mysqli_fetch_array($result))  
-                {  
-                     echo '  
-                          <tr>  
-                               <td>  
-                                    <img src="data:image/jpeg;base64,'.base64_encode($row['name'] ).'" height=auto width=auto class="img-thumnail" />
-                               </td>  
-                          </tr>  
-                     ';  
-                }  
+                include 'view_image.php'
                 ?>  
-                </table>  
            </div>  
       </body>  
  </html>  
