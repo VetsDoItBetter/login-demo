@@ -11,7 +11,7 @@ $servername = "localhost";
 $username = "root";
 $password = "PASSWORD";
 $db = "login";
-$table ="users";
+
 
 
 // Create connection

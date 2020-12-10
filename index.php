@@ -14,6 +14,8 @@
         .bg {
         /* The image used */
      
+
+        
         background-image: url("bedroom.jpg");
 
         /* Full height */
@@ -27,8 +29,10 @@
         </style>
 </head>    
 
-<body oncontextmenu = "return false">
+<body oncontextmenu = "return false" >
 
+    
+    
  <div class="topnav">
 <?php include 'menu.php';?>
 </div> 

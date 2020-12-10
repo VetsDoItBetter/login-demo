@@ -192,7 +192,7 @@ iframe {
 
 /*==================================================================
 [ Title form ]*/
-/*.login100-form-title {
+.login100-form-title {
   width: 100%;
   position: relative;
   z-index: 1;
@@ -210,7 +210,7 @@ iframe {
   background-position: center;
 
   padding: 70px 15px 74px 15px;
-}*/
+}
 
 .login100-form-title-1 {
   font-family: Poppins-Bold;

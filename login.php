@@ -1,13 +1,6 @@
-  
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <title>Login</title>
-    <head>
+<html>  
+<head>  
+    <title>PHP login system</title>  
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -33,57 +26,65 @@ and open the template in the editor.
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-    </head>
-    <body>
+</head>  
+<body>  
+    
+    <div class="topnav">
+    <?php include 'menu.php';?>
+    </div> 
+    
+    <div class="limiter"id = "frm"> 
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
+                    <span class="login100-form-title-1">
+                    SIGN IN 
+                    </span>
+                </div>
+        <form name="f1" class="login100-form validate-form action" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+            
+           <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">   
+               <span class="label-input100">Username</span>
+               
+                <input type = "text" id ="user" name  = "user" />  
+                <span class="focus-input100"></span>
+           </div>
+
+            <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+                <span class="label-input100">Password</span>
+                <input class = "input100" type = "password" id ="pass" name  = "pass" />  
+                <span class="focus-input100"></span>
+            </div>
+            <div class="container-login100-form-btn">     
+                <input type =  "submit" id = "btn" value = "Login" />  
+            </div>
+        </form>  
+    </div>  
+   
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
         
-         <div class="topnav">
-        <?php include 'menu.php';?>
-        </div> 
-
-        
-        <!--    <form class="form-signin">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname">
-    </form>-->
-  
-        
-        
-        	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
-					<span class="login100-form-title-1">
-						Sign In
-					</span>
-				</div>
-
-				<form class="login100-form validate-form">
-					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Enter username">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
-						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="pass" placeholder="Enter password">
-						<span class="focus-input100"></span>
-					</div>
-
-
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
-                                                    <?php include 'connection.php';?>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	
+        	
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -100,5 +101,5 @@ and open the template in the editor.
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-    </body>
-</html>
+</body>  
+</html>  
