@@ -9,6 +9,10 @@
       {  
            echo '<script>alert("Image Inserted into Database")</script>';  
       } 
+  else
+  {
+    echo '<script>alert("Image type invalid")</script>'; 
+  }
        
  }  
  ?>  
