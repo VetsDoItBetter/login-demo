@@ -11,6 +11,7 @@
       } 
   else
   {
+   //GeniusAlg0s
     echo '<script>alert("Image type invalid")</script>'; 
   }
        
