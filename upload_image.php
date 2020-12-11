@@ -1,6 +1,21 @@
  <?php  
-    include 'connection.php';
-    include 'upload_to_database.php';
+ $connect = mysqli_connect("localhost", "root", "PASSWORD", "login");  
+ if(isset($_POST["insert"]))  
+ {  
+      $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));  
+      //$query = "INSERT INTO tbl_images(name) VALUES ('$file')";  
+      $query = "REPLACE INTO tbl_images(id, name) VALUES (1,'$file')";
+      if(mysqli_query($connect, $query))  
+      {  
+           echo '<script>alert("Image Inserted into Database")</script>';  
+      } 
+  else
+  {
+   //GeniusAlg0s
+    echo '<script>alert("Image type invalid")</script>'; 
+  }
+       
+ }  
  ?>  
  <!DOCTYPE html>  
  <html>  
